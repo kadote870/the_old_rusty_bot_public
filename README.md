@@ -8,6 +8,12 @@
 ***
 * As I wrote this is a home project, and probably I don't do anything what was something groundbreaking, but you might find something interesting.
 ***
+This is a public repository which, by design, will not be updated as often as I would like. Why?
+* I am lazy.
+* As befits a "professional", I put secret tokens and passes in a private repository.
+* This is because I want to quickly and conveniently start a bot on the raspberryPi via ssh without any problems.
+* Running such application on the raspberry pi is a good test to see if the application code is well optimised.
+***
 
 1. To run **The Old Rusty Bot** you must create .env file in main folder
 2. Provide in to .env file bot token
