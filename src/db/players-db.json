@@ -1,0 +1,358 @@
+{
+  "characters": [
+    {
+      "data": {
+        "userId": "aaaa",
+        "player": true,
+        "characterName": "JAN JANUSZ JANUSZEWICZ",
+        "family": "",
+        "school": ""
+      },
+      "element": {
+        "ziemia": 3,
+        "ogien": 3,
+        "woda": 3,
+        "powietrze": 3,
+        "pustka": 5
+      },
+      "stats": {
+        "wytrzymalosc": 3,
+        "silaWoli": 3,
+        "zrecznosc": 3,
+        "inteligencja": 3,
+        "sila": 5,
+        "spostrzegawczosc": 3,
+        "refleks": 3,
+        "intuicja": 4
+      },
+      "skills": {
+        "kenjutsu": 2,
+        "iaijutsu": 4,
+        "kyujutsu": 5
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "katana",
+          "dmgRoll": 3,
+          "dmgKeep": 2
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 15,
+        "lightArmor": 20,
+        "heavyArmor": 25
+      },
+      "wounds": {
+        "onLvl": 6,
+        "all": 48
+      },
+      "prestige": {
+        "prestigeSum": 181,
+        "prestigeRank": 3
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    },
+    {
+      "data": {
+        "userId": "bbb",
+        "player": true,
+        "characterName": "rusty-bot sama",
+        "family": "hiruma",
+        "school": "hida"
+      },
+      "element": {
+        "ziemia": 2,
+        "ogien": 1,
+        "woda": 2,
+        "powietrze": 1,
+        "pustka": 5
+      },
+      "stats": {
+        "wytrzymalosc": 2,
+        "silaWoli": 5,
+        "zrecznosc": 1,
+        "inteligencja": 4,
+        "sila": 2,
+        "spostrzegawczosc": 3,
+        "refleks": 2,
+        "intuicja": 1
+      },
+      "skills": {
+        "kenjutsu": 1,
+        "iaijutsu": 4,
+        "kyujutsu": 4
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "analizator powietrze",
+          "dmgRoll": 5,
+          "dmgKeep": 4
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 10,
+        "lightArmor": 15,
+        "heavyArmor": 20
+      },
+      "wounds": {
+        "onLvl": 4,
+        "all": 32
+      },
+      "prestige": {
+        "prestigeSum": 119,
+        "prestigeRank": 1
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    },
+    {
+      "data": {
+        "userId": "fake_id_1",
+        "player": true,
+        "characterName": "dataFaker1 kakita swordsman",
+        "family": "",
+        "school": "kAkitA"
+      },
+      "element": {
+        "ziemia": 3,
+        "ogien": 2,
+        "woda": 3,
+        "powietrze": 2,
+        "pustka": 1
+      },
+      "stats": {
+        "wytrzymalosc": 3,
+        "silaWoli": 5,
+        "zrecznosc": 3,
+        "inteligencja": 2,
+        "sila": 3,
+        "spostrzegawczosc": 3,
+        "refleks": 4,
+        "intuicja": 2
+      },
+      "skills": {
+        "kenjutsu": 1,
+        "iaijutsu": 3,
+        "kyujutsu": 2
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "katana",
+          "dmgRoll": 3,
+          "dmgKeep": 2
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 20,
+        "lightArmor": 25,
+        "heavyArmor": 30
+      },
+      "wounds": {
+        "onLvl": 6,
+        "all": 48
+      },
+      "prestige": {
+        "prestigeSum": 116,
+        "prestigeRank": 1
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    },
+    {
+      "data": {
+        "userId": "fake_id_2",
+        "player": true,
+        "characterName": "dataFaker2",
+        "family": "",
+        "school": ""
+      },
+      "element": {
+        "ziemia": 2,
+        "ogien": 2,
+        "woda": 1,
+        "powietrze": 3,
+        "pustka": 5
+      },
+      "stats": {
+        "wytrzymalosc": 5,
+        "silaWoli": 2,
+        "zrecznosc": 2,
+        "inteligencja": 3,
+        "sila": 3,
+        "spostrzegawczosc": 1,
+        "refleks": 4,
+        "intuicja": 3
+      },
+      "skills": {
+        "kenjutsu": 2,
+        "iaijutsu": 1,
+        "kyujutsu": 4
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "katana",
+          "dmgRoll": 3,
+          "dmgKeep": 2
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 20,
+        "lightArmor": 25,
+        "heavyArmor": 30
+      },
+      "wounds": {
+        "onLvl": 4,
+        "all": 32
+      },
+      "prestige": {
+        "prestigeSum": 137,
+        "prestigeRank": 1
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    },
+    {
+      "data": {
+        "userId": "fake_id_3",
+        "player": true,
+        "characterName": "dataFaker3",
+        "family": "",
+        "school": ""
+      },
+      "element": {
+        "ziemia": 2,
+        "ogien": 2,
+        "woda": 3,
+        "powietrze": 1,
+        "pustka": 2
+      },
+      "stats": {
+        "wytrzymalosc": 4,
+        "silaWoli": 2,
+        "zrecznosc": 2,
+        "inteligencja": 3,
+        "sila": 3,
+        "spostrzegawczosc": 3,
+        "refleks": 1,
+        "intuicja": 4
+      },
+      "skills": {
+        "kenjutsu": 3,
+        "iaijutsu": 1,
+        "kyujutsu": 4
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "katana",
+          "dmgRoll": 3,
+          "dmgKeep": 2
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 5,
+        "lightArmor": 10,
+        "heavyArmor": 15
+      },
+      "wounds": {
+        "onLvl": 4,
+        "all": 32
+      },
+      "prestige": {
+        "prestigeSum": 108,
+        "prestigeRank": 1
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    },
+    {
+      "data": {
+        "userId": "fake_id_4",
+        "player": true,
+        "characterName": "dataFaker4",
+        "family": "",
+        "school": ""
+      },
+      "element": {
+        "ziemia": 2,
+        "ogien": 1,
+        "woda": 3,
+        "powietrze": 1,
+        "pustka": 1
+      },
+      "stats": {
+        "wytrzymalosc": 2,
+        "silaWoli": 2,
+        "zrecznosc": 5,
+        "inteligencja": 1,
+        "sila": 5,
+        "spostrzegawczosc": 3,
+        "refleks": 1,
+        "intuicja": 5
+      },
+      "skills": {
+        "kenjutsu": 3,
+        "iaijutsu": 3,
+        "kyujutsu": 1
+      },
+      "weapon": {
+        "katana": {
+          "weaponName": "katana",
+          "dmgRoll": 3,
+          "dmgKeep": 2
+        }
+      },
+      "hitDifficulty": {
+        "noArmor": 5,
+        "lightArmor": 10,
+        "heavyArmor": 15
+      },
+      "wounds": {
+        "onLvl": 4,
+        "all": 32
+      },
+      "prestige": {
+        "prestigeSum": 87,
+        "prestigeRank": 1
+      },
+      "glory": {
+        "gloryLvl": 2,
+        "gloryPoints": 22
+      },
+      "honor": {
+        "honorLvl": 8,
+        "honorPoints": 85
+      }
+    }
+  ]
+}
