@@ -55,7 +55,7 @@ Client.on('messageCreate', async (message) => {
          new BotResponse(
             user,
             message,
-            `# [${user}, dlaczego dzbanie nie pamiętasz gdzie jest karta?](https://docs.google.com/spreadsheets/d/1pbGUuLgJSSfjRtRxYjOuMpPkMVms889_qFNwJsSYL40/edit#gid=0)`
+            `# [${user}, dlaczego dzbanie nie pamiętasz gdzie jest karta?](https://docs.google.com/spreadsheets/d/xxxxxxxxxxxxxxxxxxx)`
          );
          break;
       case `giga`:
