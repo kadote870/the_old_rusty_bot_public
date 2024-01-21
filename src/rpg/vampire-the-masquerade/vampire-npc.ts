@@ -1,131 +1,133 @@
-import {get_random_value_from_array} from "../../infrastructure/functions";
+import { get_random_value_from_array } from '../../infrastructure/functions';
 
 // some variables can be in Polish language - according to polish rulebook 'Legend Of The Fife Rings' ed.1
 export class VampireNpc {
-    public npc: {
-        byt: string,
-        umyslowe: {
-            skills: {
-                spostrzegawczosc: number;
-                nauka: number;
-                medycyna: number;
-                sledztwo: number;
-                okultyzm: number;
-                polityka: number;
-                wyksztalcenie: number;
-                technika: number;
-                finanse: number
-            };
-            attribute: { determinacja: number; inteligencja: number; spryt: number }
-        };
-        spoleczne: {
-            skills: {
-                przebieglosc: number;
-                wystepyPubliczne: number;
-                zastraszanie: number;
-                etykieta: number;
-                perswazja: number;
-                cwaniactwo: number;
-                intuicja: number;
-                rozumienieZwierzat: number;
-                zdolnosciPrzywodcze: number
-            };
-            attribute: { opanowanie: number; manipulacja: number; charyzma: number }
-        };
-        fizyczne: {
+   public npc: {
+      byt: string;
+      umyslowe: {
+         skills: {
+            spostrzegawczosc: number;
+            nauka: number;
+            medycyna: number;
+            sledztwo: number;
+            okultyzm: number;
+            polityka: number;
+            wyksztalcenie: number;
+            technika: number;
+            finanse: number;
+         };
+         attribute: {
+            determinacja: number;
+            inteligencja: number;
+            spryt: number;
+         };
+      };
+      spoleczne: {
+         skills: {
+            przebieglosc: number;
+            wystepyPubliczne: number;
+            zastraszanie: number;
+            etykieta: number;
+            perswazja: number;
+            cwaniactwo: number;
+            intuicja: number;
+            rozumienieZwierzat: number;
+            zdolnosciPrzywodcze: number;
+         };
+         attribute: {
+            opanowanie: number;
+            manipulacja: number;
+            charyzma: number;
+         };
+      };
+      fizyczne: {
+         skill: {
+            prowadzeniePojazdow: number;
+            bronBiala: number;
+            wysportowanie: number;
+            sztukaPrzetrwania: number;
+            walkaWrecz: number;
+            kradziez: number;
+            krycieSie: number;
+            rzemioslo: number;
+            strzelanie: number;
+         };
+         attribute: { zrecznosc: number; sila: number; wytrzymalosc: number };
+      };
+   };
+   protected byt: string;
+   protected attributeRange: number[];
+   protected skillRange: number[];
+
+   constructor() {
+      this.byt = 'Wampir';
+      this.attributeRange = [1, 2, 3, 4, 5]; // 5 - 1:5
+      this.skillRange = [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5]; // 5 - 1:21
+      this.npc = this.generateNpc();
+   }
+
+   generateNpc(): any {
+      return {
+         byt: this.byt,
+         fizyczne: {
+            attribute: {
+               sila: get_random_value_from_array(this.attributeRange),
+               zrecznosc: get_random_value_from_array(this.attributeRange),
+               wytrzymalosc: get_random_value_from_array(this.attributeRange),
+            },
             skill: {
-                prowadzeniePojazdow: number;
-                bronBiala: number;
-                wysportowanie: number;
-                sztukaPrzetrwania: number;
-                walkaWrecz: number;
-                kradziez: number;
-                krycieSie: number;
-                rzemioslo: number;
-                strzelanie: number
-            };
-            attribute: { zrecznosc: number; sila: number; wytrzymalosc: number }
-        }
-    };
-    protected byt: string;
-    protected attributeRange: number[];
-    protected skillRange: number[];
-
-    constructor() {
-        this.byt = 'Wampir';
-        this.attributeRange = [1, 2, 3, 4, 5];  // 5 - 1:5
-        this.skillRange = [
-            0, 0, 0, 0, 0, 0,
-            1, 1, 1, 1, 1,
-            2, 2, 2, 2,
-            3, 3, 3,
-            4, 4,
-            5]; // 5 - 1:21
-        this.npc = this.generateNpc();
-    }
-
-    generateNpc(): any {
-        return {
-            byt: this.byt,
-            fizyczne: {
-                attribute: {
-                    sila: get_random_value_from_array(this.attributeRange),
-                    zrecznosc: get_random_value_from_array(this.attributeRange),
-                    wytrzymalosc: get_random_value_from_array(this.attributeRange)
-                },
-                skill: {
-                    bronBiala: get_random_value_from_array(this.skillRange),
-                    kradziez: get_random_value_from_array(this.skillRange),
-                    krycieSie: get_random_value_from_array(this.skillRange),
-                    prowadzeniePojazdow: get_random_value_from_array(this.skillRange),
-                    rzemioslo: get_random_value_from_array(this.skillRange),
-                    strzelanie: get_random_value_from_array(this.skillRange),
-                    sztukaPrzetrwania: get_random_value_from_array(this.skillRange),
-                    walkaWrecz: get_random_value_from_array(this.skillRange),
-                    wysportowanie: get_random_value_from_array(this.skillRange)
-                }
+               bronBiala: get_random_value_from_array(this.skillRange),
+               kradziez: get_random_value_from_array(this.skillRange),
+               krycieSie: get_random_value_from_array(this.skillRange),
+               prowadzeniePojazdow: get_random_value_from_array(this.skillRange),
+               rzemioslo: get_random_value_from_array(this.skillRange),
+               strzelanie: get_random_value_from_array(this.skillRange),
+               sztukaPrzetrwania: get_random_value_from_array(this.skillRange),
+               walkaWrecz: get_random_value_from_array(this.skillRange),
+               wysportowanie: get_random_value_from_array(this.skillRange),
             },
-            spoleczne: {
-                attribute: {
-                    charyzma: get_random_value_from_array(this.attributeRange),
-                    manipulacja: get_random_value_from_array(this.attributeRange),
-                    opanowanie: get_random_value_from_array(this.attributeRange),
-                },
-                skills: {
-                    cwaniactwo: get_random_value_from_array(this.skillRange),
-                    etykieta: get_random_value_from_array(this.skillRange),
-                    intuicja: get_random_value_from_array(this.skillRange),
-                    perswazja: get_random_value_from_array(this.skillRange),
-                    przebieglosc: get_random_value_from_array(this.skillRange),
-                    rozumienieZwierzat: get_random_value_from_array(this.skillRange),
-                    wystepyPubliczne: get_random_value_from_array(this.skillRange),
-                    zastraszanie: get_random_value_from_array(this.skillRange),
-                    zdolnosciPrzywodcze: get_random_value_from_array(this.skillRange)
-                }
+         },
+         spoleczne: {
+            attribute: {
+               charyzma: get_random_value_from_array(this.attributeRange),
+               manipulacja: get_random_value_from_array(this.attributeRange),
+               opanowanie: get_random_value_from_array(this.attributeRange),
             },
-            umyslowe: {
-                attribute: {
-                    inteligencja: get_random_value_from_array(this.attributeRange),
-                    spryt: get_random_value_from_array(this.attributeRange),
-                    determinacja: get_random_value_from_array(this.attributeRange),
-                },
-                skills: {
-                    finanse: get_random_value_from_array(this.skillRange),
-                    medycyna: get_random_value_from_array(this.skillRange),
-                    nauka: get_random_value_from_array(this.skillRange),
-                    okultyzm: get_random_value_from_array(this.skillRange),
-                    polityka: get_random_value_from_array(this.skillRange),
-                    spostrzegawczosc: get_random_value_from_array(this.skillRange),
-                    sledztwo: get_random_value_from_array(this.skillRange),
-                    technika: get_random_value_from_array(this.skillRange),
-                    wyksztalcenie: get_random_value_from_array(this.skillRange)
-                }
-            }
-        }
-    }
+            skills: {
+               cwaniactwo: get_random_value_from_array(this.skillRange),
+               etykieta: get_random_value_from_array(this.skillRange),
+               intuicja: get_random_value_from_array(this.skillRange),
+               perswazja: get_random_value_from_array(this.skillRange),
+               przebieglosc: get_random_value_from_array(this.skillRange),
+               rozumienieZwierzat: get_random_value_from_array(this.skillRange),
+               wystepyPubliczne: get_random_value_from_array(this.skillRange),
+               zastraszanie: get_random_value_from_array(this.skillRange),
+               zdolnosciPrzywodcze: get_random_value_from_array(this.skillRange),
+            },
+         },
+         umyslowe: {
+            attribute: {
+               inteligencja: get_random_value_from_array(this.attributeRange),
+               spryt: get_random_value_from_array(this.attributeRange),
+               determinacja: get_random_value_from_array(this.attributeRange),
+            },
+            skills: {
+               finanse: get_random_value_from_array(this.skillRange),
+               medycyna: get_random_value_from_array(this.skillRange),
+               nauka: get_random_value_from_array(this.skillRange),
+               okultyzm: get_random_value_from_array(this.skillRange),
+               polityka: get_random_value_from_array(this.skillRange),
+               spostrzegawczosc: get_random_value_from_array(this.skillRange),
+               sledztwo: get_random_value_from_array(this.skillRange),
+               technika: get_random_value_from_array(this.skillRange),
+               wyksztalcenie: get_random_value_from_array(this.skillRange),
+            },
+         },
+      };
+   }
 
-    printer(): string {
-        return `
+   printer(): string {
+      return `
 ***${this.byt}
 ***[Siła:${this.npc.fizyczne.attribute.sila}][Zręczność:${this.npc.fizyczne.attribute.zrecznosc}][Wytrzymałość:${this.npc.fizyczne.attribute.wytrzymalosc}]***
 Broń Biała: ${this.npc.fizyczne.skill.bronBiala},
@@ -156,27 +158,29 @@ Polityka: ${this.npc.umyslowe.skills.polityka},
 Spostrzegawczość: ${this.npc.umyslowe.skills.spostrzegawczosc},
 Śledztwo: ${this.npc.umyslowe.skills.sledztwo},
 Technika: ${this.npc.umyslowe.skills.technika},
-Wykształcenie: ${this.npc.umyslowe.skills.wyksztalcenie}`
-    }
+Wykształcenie: ${this.npc.umyslowe.skills.wyksztalcenie}`;
+   }
 }
 
 export class VampireHumanNpc extends VampireNpc {
-    constructor() {
-        super();
-        this.byt = 'Człowiek';
-        this.attributeRange = [
-            1, 1, 1, 1, 1, 1,
-            2, 2, 2, 2, 2,
-            3, 3, 3,
-            4, 4,
-            5]; // 5 - 1:17
-        this.skillRange = [
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-            2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-            3, 3, 3, 3, 3,
-            4, 4,
-            5]; // 5 - 1:63
-        this.npc = this.generateNpc();
-    }
+   constructor() {
+      super();
+      this.byt = 'Człowiek';
+      // prettier-ignore
+      this.attributeRange = [
+         1, 1, 1, 1, 1, 1,
+         2, 2, 2, 2, 2,
+         3, 3, 3,
+         4, 4,
+         5]; // 5 - 1:17
+      // prettier-ignore
+      this.skillRange = [
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+         3, 3, 3, 3, 3,
+         4, 4,
+         5]; // 5 - 1:63
+      this.npc = this.generateNpc();
+   }
 }
