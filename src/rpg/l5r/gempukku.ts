@@ -1,34 +1,34 @@
 import fs from 'fs';
 
 class Participant {
-    public clanParticipant: any;
-    public familyParticipant: any;
-    public nameParticipant: any;
-    public nameTranslationParticipant: any;
-    public genderParticipant: any;
-    public professionParticipant: any;
-    public storyProfessionParticipant: any;
-    public schoolParticipant: any;
+   public clanParticipant: any;
+   public familyParticipant: any;
+   public nameParticipant: any;
+   public nameTranslationParticipant: any;
+   public genderParticipant: any;
+   public professionParticipant: any;
+   public storyProfessionParticipant: any;
+   public schoolParticipant: any;
 
-    constructor(
-        clan: any,
-        family: any,
-        npcName: any,
-        nameTranslation: any,
-        gender: any,
-        profession: any,
-        school: any,
-        storyProfession: any
-    ) {
-        this.clanParticipant = clan;
-        this.familyParticipant = family;
-        this.nameParticipant = npcName;
-        this.nameTranslationParticipant = nameTranslation;
-        this.genderParticipant = gender;
-        this.professionParticipant = profession;
-        this.storyProfessionParticipant = storyProfession;
-        this.schoolParticipant = school;
-    }
+   constructor(
+      clan: any,
+      family: any,
+      npcName: any,
+      nameTranslation: any,
+      gender: any,
+      profession: any,
+      school: any,
+      storyProfession: any
+   ) {
+      this.clanParticipant = clan;
+      this.familyParticipant = family;
+      this.nameParticipant = npcName;
+      this.nameTranslationParticipant = nameTranslation;
+      this.genderParticipant = gender;
+      this.professionParticipant = profession;
+      this.storyProfessionParticipant = storyProfession;
+      this.schoolParticipant = school;
+   }
 
     printer() {
         return `${this.clanParticipant || ''} ${this.familyParticipant || ''} ${this.nameParticipant}`;
@@ -36,23 +36,23 @@ class Participant {
 }
 
 export const pairs = () => {
-    function loadParticipantsFromJSONFile(filename: string): Participant[] {
-        const jsonData = fs.readFileSync(filename, 'utf8');
-        const participantsData = JSON.parse(jsonData);
+   function loadParticipantsFromJSONFile(filename: string): Participant[] {
+      const jsonData = fs.readFileSync(filename, 'utf8');
+      const participantsData = JSON.parse(jsonData);
 
-        return participantsData.participants.map((participant: any) => {
-            return new Participant(
-                participant.clan,
-                participant.family,
-                participant.name,
-                participant.nameTranslation,
-                participant.gender,
-                participant.profession,
-                participant.school,
-                participant.storyProfession
-            );
-        });
-    }
+      return participantsData.participants.map((participant: any) => {
+         return new Participant(
+            participant.clan,
+            participant.family,
+            participant.name,
+            participant.nameTranslation,
+            participant.gender,
+            participant.profession,
+            participant.school,
+            participant.storyProfession
+         );
+      });
+   }
 
     function randomPairs(arr: string[]) {
         const shuffled = arr.sort(() => 0.5 - Math.random());
@@ -70,8 +70,12 @@ export const pairs = () => {
         return pairs;
     }
 
-    const participants = loadParticipantsFromJSONFile('./src/db/l5r-participants.json');
-    const participantDescriptions = participants.map((participant) => participant.printer());
+   const participants = loadParticipantsFromJSONFile(
+      './src/db/l5r-participants.json'
+   );
+   const participantDescriptions = participants.map((participant) =>
+      participant.printer()
+   );
 
-    return randomPairs(participantDescriptions).toString();
-}
+   return randomPairs(participantDescriptions).toString();
+};
